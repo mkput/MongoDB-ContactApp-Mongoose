@@ -20,12 +20,23 @@
             class="btn btn-primary badge"
             >Ubah</a
           >
-          <a
+          <!-- <a
             href="/contact/delete/<%= contact.nama %>"
             class="btn btn-danger badge"
             onclick="return confirm('yakin?')"
             >Hapus</a
-          >
+          > -->
+
+          <form method="POST" action="/contact?_method=DELETE" class="d-inline">
+            <input type="hidden" name="nama" value="<%= contact.nama %>" />
+            <button
+              type="submit"
+              class="btn btn-danger badge"
+              onclick="return confirm('yakin?')"
+            >
+              Hapus
+            </button>
+          </form>
           <a href="/contact" class="card-link d-block mt-3"
             >&laquo; Kembali ke Daftar Contacts</a
           >

@@ -13,7 +13,8 @@
       </div>
       <% } %>
 
-      <form method="post" action="/contact/update">
+      <form method="post" action="/contact?_method=PUT">
+        <input type="hidden" name="_id" value="<%= contact._id %>" />
         <input
           type="hidden"
           name="oldName"
@@ -51,7 +52,7 @@
             value="<%= contact.nohp %>"
           />
         </div>
-        <button type="submit" class="btn btn-dark">Tambah Data Contact</button>
+        <button type="submit" class="btn btn-dark">Ubah Data Contact</button>
       </form>
     </div>
   </div>
